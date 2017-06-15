@@ -29,3 +29,7 @@ code/lstm_cnn/util.py contains balancing data, padding, etc.
 code/lstm_cnn/all.py lists all the heaters with their number of positive days.
 
 model/DeepCNN_LSTM.model is the best model we currently have, which achieved 0.7549 AUC.
+
+## data after preprocessing should be in the following format:
+
+Each heater is a .npz file, it stores each day's data as a np.array. For each numpy array, it should be a 21\*8640 matrix where 1st column is the timestamp, second column is the label of that day (should be all 0 or all 1), and the rest 19 column are sensor readings.
